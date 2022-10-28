@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Primary-BrightOrange: hsl(31, 77%, 52%);
+    --Primary-DarkCyan: hsl(184, 100%, 22%);
+    --Primary-VeryDarkCyan: hsl(179, 100%, 13%);
+
+    --Neutral-TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    --Neutral-VeryLightGray: hsl(0, 0%, 95%);
+
+    
+    font-size: 15px;
+}
+
+.f-BigShouldersDisplay {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem;
+}
+
+.main__container {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.container__car {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+}
+.container__car:nth-child(1) {
+    background-color: var(--Primary-BrightOrange);
+
+}
+.container__car:nth-child(2) {
+    background-color: var(--Primary-DarkCyan);
+
+}
+.container__car:nth-child(3) {
+    background-color: var(--Primary-VeryDarkCyan);
+}
+
+.container__car img {
+    width: 3.8rem;
+}
+
+.container__car .car__model {
+    font-size: 2.6rem;
+    color: var(--Neutral-VeryLightGray);
+}
+
+.container__car .car__description {
+    line-height: 1.5rem;
+    color: var(--Neutral-TransparentWhite);
+}
+
+.container__car .car__moreInfo {
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    background-color: var(--Neutral-VeryLightGray);
+    border: 1px solid var(--Neutral-VeryLightGray);
+    cursor: pointer;    
+}
+
+.container__car:nth-child(1) .car__moreInfo {
+    color: var(--Primary-BrightOrange);
+}
+.container__car:nth-child(2) .car__moreInfo {
+    color: var(--Primary-DarkCyan);
+}
+.container__car:nth-child(3) .car__moreInfo {
+    color: var(--Primary-VeryDarkCyan);
+}
+
+.container__car .car__moreInfo:active {
+    background-color: hsla(0, 0%, 95%, 0);
+    color: var(--Neutral-VeryLightGray);
+    
+}
+
+@media (min-width: 950px) {
+
+    .main__container {
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .container__car .car__moreInfo {
+        margin-top: 3.5rem;
+    }
+
+
+
+}

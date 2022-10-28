@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* *****************  TEMPORAL*/
+
+/* ***************** */
+
+:root {
+    --primaryColor--1 : hsl(300, 43%, 22%);
+    --primaryColor--2 : hsl(333, 80%, 67%);
+    --neutralColor--1 : hsl(303, 10%, 53%);
+    --neutralColor--2 : hsl(300, 24%, 96%);
+    --neutralColor--3 : hsl(0, 0%, 100%);
+    
+    --maxDimensionContainer: 18.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.f-LeagueSpartan-400 {
+    font-size: 400;
+}
+.f-LeagueSpartan-500 {
+    font-size: 500;
+}
+.f-LeagueSpartan-700 {
+    font-size: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--neutralColor--3);
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Se ajusta esto */
+}
+.container {
+    max-width: var(--maxDimensionContainer);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.container .description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.description .title__description {
+    padding: 1rem;
+    color: var(--primaryColor--1);
+}
+
+.description .paragraph__description {
+    color: var(--neutralColor--1);
+    line-height: 1.4rem;
+}
+
+.container .ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    
+}
+
+.ratings .rated__ratings {
+    background-color: var(--neutralColor--2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 100%;
+    color: var(--primaryColor--1);
+    padding: 0.5rem;
+}
+
+.container .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comments .box__comments {
+    display: flex;
+    width: 18.5rem;
+    flex-wrap: wrap;
+    background-color: var(--primaryColor--1);
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    height: max-content;
+}
+
+.box__comments img {
+    width: 15%;
+    border-radius: 100%;
+}
+
+.box__comments .basicInfo__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.basicInfo__box .name__basicInfo{
+    font-size: 1rem;
+    color: var(--neutralColor--3)
+}
+
+.basicInfo__box .status__basicInfo{
+    color: var(--primaryColor--2);
+}
+
+.box__comments .comment__box {
+    color: var(--neutralColor--3);
+    line-height: 1.4rem;
+}
+
+@media (min-width: 600px) {
+    body {
+        padding: 4rem 1rem;
+    }
+
+    .container {
+        max-width: calc(var(--maxDimensionContainer) * 2.8);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .container .description { 
+        text-align: start;
+        padding-left: 0;
+        width: var(--maxDimensionContainer);
+        gap: 0.5rem;
+    }
+
+    .description .title__description {
+        padding-left: 0;
+        font-size: 3rem;
+    }
+
+    .container .ratings { 
+        width: calc(100% - var(--maxDimensionContainer) - 1rem);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ratings .rated__ratings {
+        max-width: calc( ( 40rem - var(--maxDimensionContainer) - 1rem )) ;
+    }
+
+    .ratings .rated__ratings:nth-child(1) {
+        align-self: flex-start;
+    }
+    .ratings .rated__ratings:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .container .comments { 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+@media (min-width: 1002px) {
+    .container {
+        max-width: calc(var(--maxDimensionContainer) * 3.5);
+        gap: 0;
+    }
+
+    .container .comments {
+        height: 16rem;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container .description{
+        width: 40%;
+    }
+
+    .description .title__description {
+        padding-right: 2rem;
+
+    }
+
+    .container .ratings {
+        justify-content: center;
+        width: calc(100% - 40% - 1rem);
+    }
+    .ratings .rated__ratings {
+        flex-direction: row;
+        justify-content: center;
+        max-width: calc( ( 45rem - var(--maxDimensionContainer) - 1rem ));
+    }
+
+    .comments .box__comments {
+        width: 36ch;
+    }
+
+    .comments .box__comments:nth-child(1) {
+        align-self: flex-start;
+    }
+    .comments .box__comments:nth-child(3) {
+        align-self: flex-end;
+    }
+
+
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+}
